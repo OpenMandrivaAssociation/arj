@@ -11,7 +11,6 @@ Patch: arj-3.10.21-debian-arches-align.patch
 License: GPL
 Group: Archiving/Compression
 Url: http://arj.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A portable version of the ARJ archiver, available for a growing number
