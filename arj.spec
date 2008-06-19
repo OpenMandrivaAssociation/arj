@@ -1,6 +1,6 @@
 %define name arj
 %define version 3.10.22
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: File compression and packaging utility compatible with ARJ for MS-DOS
 Name: %{name}
