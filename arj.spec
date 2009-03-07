@@ -10,6 +10,7 @@ Source0: http://prdownloads.sourceforge.net/arj/%{name}-%{version}.tar.bz2
 Patch: arj-3.10.21-debian-arches-align.patch
 Patch1: arj-3.10.22-fix_format_string.patch
 License: GPL
+BuildRequires: automake
 Group: Archiving/Compression
 Url: http://arj.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -26,11 +27,14 @@ Software, Inc.
 %patch1 -p0
 
 cd gnu
+# (misc) fix compile on x86_64, as the platform is otherwise not recognized
+# by the current config.sub
+cp /usr/share/automake-1.10/config.sub .
 autoconf
 
 %build
 cd gnu
-%configure2_5x
+%configure
 cd ..
 make prepare
 #gw strange errors from the postproc command
