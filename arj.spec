@@ -8,6 +8,7 @@ Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/arj/%{name}-%{version}.tar.bz2
 Patch: arj-3.10.21-debian-arches-align.patch
+Patch1: arj-3.10.22-fix_format_string.patch
 License: GPL
 Group: Archiving/Compression
 Url: http://arj.sourceforge.net/
@@ -22,6 +23,8 @@ Software, Inc.
 %prep
 %setup -q
 %patch -p1
+%patch1 -p0
+
 cd gnu
 autoconf
 
