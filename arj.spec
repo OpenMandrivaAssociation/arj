@@ -29,7 +29,7 @@ Software, Inc.
 cd gnu
 # (misc) fix compile on x86_64, as the platform is otherwise not recognized
 # by the current config.sub
-cp /usr/share/automake-1.10/config.sub .
+cp /usr/share/automake-1.11/config.sub .
 autoconf
 
 %build
