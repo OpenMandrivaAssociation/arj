@@ -1,6 +1,6 @@
 %define name arj
 %define version 3.10.22
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary: File compression and packaging utility compatible with ARJ for MS-DOS
 Name: %{name}
@@ -9,7 +9,8 @@ Release: %{release}
 Source0: http://prdownloads.sourceforge.net/arj/%{name}-%{version}.tar.bz2
 Patch: arj-3.10.21-debian-arches-align.patch
 Patch1: arj-3.10.22-fix_format_string.patch
-License: GPL
+Patch2: arj-3.10.2-fix_strnlen_redefinition.patch
+License: GPLv2
 BuildRequires: automake
 Group: Archiving/Compression
 Url: http://arj.sourceforge.net/
@@ -25,6 +26,7 @@ Software, Inc.
 %setup -q
 %patch -p1
 %patch1 -p0
+%patch2 -p0 
 
 cd gnu
 # (misc) fix compile on x86_64, as the platform is otherwise not recognized
