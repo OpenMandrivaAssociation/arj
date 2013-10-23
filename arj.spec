@@ -1,11 +1,11 @@
 %define name arj
 %define version 3.10.22
-%define release 9
+%define release 10
 
 Summary:	File compression and packaging utility compatible with ARJ for MS-DOS
 Name:		arj
 Version:	3.10.22
-Release:	11
+Release:	12
 Source0:	http://prdownloads.sourceforge.net/arj/%{name}-%{version}.tar.bz2
 Patch:		arj-3.10.21-debian-arches-align.patch
 Patch1:		arj-3.10.22-fix_format_string.patch
