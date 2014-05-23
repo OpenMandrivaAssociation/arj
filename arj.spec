@@ -1,7 +1,6 @@
-%define name arj
-%define version 3.10.22
 
 Summary:	File compression and packaging utility compatible with ARJ for MS-DOS
+
 Name:		arj
 Version:	3.10.22
 Release:	13
@@ -48,20 +47,13 @@ make ADD_LDFLAGS="" || make || make || make
 %makeinstall
 
 %files
-%defattr(-,root,root)
 %doc doc/*
-%_bindir/arj
-%_bindir/arj-register
-%_bindir/arjdisp
-%_bindir/rearj
-%dir %_libdir/arj/
-%_libdir/arj/arjcrypt.so
-%_mandir/man1/*.1*
-
-
-%changelog
-* Tue Jan 07 2014 Tomasz Paweł Gajc <tpgxyz@gmail.com> 3.10.22-13
-+ Revision: 80677ad
-- rebuild
+%{_bindir}/arj
+%{_bindir}/arj-register
+%{_bindir}/arjdisp
+%{_bindir}/rearj
+%dir %{_libdir}/arj/
+%{_libdir}/arj/arjcrypt.so
+%{_mandir}/man1/*.1*
 
 
