@@ -1,6 +1,7 @@
 
 Summary:	File compression and packaging utility compatible with ARJ for MS-DOS
 
+
 Name:		arj
 Version:	3.10.22
 Release:	13
