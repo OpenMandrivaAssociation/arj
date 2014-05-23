@@ -1,0 +1,22 @@
+Index: fardata.c
+===================================================================
+--- fardata.c
++++ fardata.c	2009-09-07 12:44:28.000000000 +0200
+@@ -189,7 +189,7 @@
+  */
+ 
+ /* Length-limited strlen() */
+-
++/*
+ static int strnlen(const char FAR *s, int count)
+ {
+  const char FAR *sc;
+@@ -198,7 +198,7 @@
+   ;
+  return(sc-s);
+ }
+-
++*/
+ /* Hex representation of digits */
+ 
+ static char adigit(unsigned long n, int is_uc)
