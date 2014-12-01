@@ -1,7 +1,7 @@
 Summary:	File compression and packaging utility compatible with ARJ for MS-DOS
 Name:		arj
 Version:	3.10.22
-Release:	11
+Release:	11.1
 License:	GPLv2+
 Group:		Archiving/Compression
 Url:		http://arj.sourceforge.net/
@@ -54,12 +54,3 @@ make ADD_LDFLAGS="" || make || make || make
 
 %install
 %makeinstall_std
-
-
-
-%changelog
-* Tue Feb 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3.10.22-11
-+ Revision: eaeddad
-- LOG Adjust automake version
-
-
