@@ -1,9 +1,7 @@
 Summary:	File compression and packaging utility compatible with ARJ for MS-DOS
-
-
 Name:		arj
 Version:	3.10.22
-Release:	12
+Release:	13
 License:	GPLv2+
 Group:		Archiving/Compression
 Url:		http://arj.sourceforge.net/
@@ -12,6 +10,9 @@ Patch:		arj-3.10.21-debian-arches-align.patch
 Patch1:		arj-3.10.22-fix_format_string.patch
 Patch2:		arj-3.10.2-fix_strnlen_redefinition.patch
 Patch3:		arj-3.10.22-quotes.patch
+Patch6:		arj-3.10.22-debian-security-afl.patch
+Patch7:		arj-3.10.22-debian-security-traversal-dir.patch
+Patch8:		arj-3.10.22-debian-security-traversal-symlink.patch
 BuildRequires:	automake
 
 %description
@@ -38,6 +39,9 @@ Software, Inc.
 %patch1 -p0
 %patch2 -p0
 %patch3 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
 
 cd gnu
 # (misc) fix compile on x86_64, as the platform is otherwise not recognized
@@ -56,6 +60,5 @@ make ADD_LDFLAGS="" || make || make || make
 
 %install
 %makeinstall_std
-
 
 
