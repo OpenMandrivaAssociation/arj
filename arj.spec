@@ -13,6 +13,9 @@ Patch3:		arj-3.10.22-quotes.patch
 Patch6:		arj-3.10.22-debian-security-afl.patch
 Patch7:		arj-3.10.22-debian-security-traversal-dir.patch
 Patch8:		arj-3.10.22-debian-security-traversal-symlink.patch
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	automake
 
 %description
